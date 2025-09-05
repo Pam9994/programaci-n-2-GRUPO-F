@@ -21,10 +21,28 @@ def enmascarar_fecha(texto):
         fecha_actual=datetime.now().date()
         fecha_Nacimiento=datetime.strptime(fechaN.get(), "%d-%m-%Y").date()
         edad=fecha_actual.year-fecha_Nacimiento.year
+        edadVar.set(edad)
     else:
         edadVar.set(edad)
     return True
-
+def cargar_treeview():
+    #limpiar treeview
+    for paciente in TreeViw.get_children():
+        TreeViw.delete(paciente)
+        #insertar cada paciente
+    for i, item in enumerate(pacientes_data):
+        TreeViw.insert(
+            "","end", iid=str(i),
+            values=(
+                item["nombre"],
+                item["fecha de nacimienta"],
+                item["edad"],
+                item["genero"],
+                item["grupo sanguineo"],
+                item["tipo de seguro"],
+                item["centro medico"]
+                )
+            )
 #lista de pacientes
 pacientes_data=[]
 #funcion de registrar pacientes
@@ -43,27 +61,6 @@ def rgistrarPacientes():
     pacientes_data.append(paciente)
     #cargar el treeviw
     cargar_treeview()
-    
-def cargar_treeview():
-    #limpiar treeview
-    for paciente in treeview.get_children():
-        treeview.delate(paciente)
-        #insertar cada paciente
-        for i, item in enumerate(pacientes_data):
-            treeview.insert(
-                "","end", iid=str(i),
-                values=(
-                    item["nombre"],
-                    item["fecha de nacimienta"],
-                    item["edad"],
-                    item["genero"],
-                    item["grupo sanguineo"],
-                    item["tipo de seguro"],
-                    item["centro medico"]
-                )
-            )    
-    
-    
     
 #crear ventana
 ventana_princpal=tk.Tk()
@@ -115,9 +112,9 @@ radioFemenino.grid(row=4, column=1, padx=5, pady=5)
 
 #Grupo sanguineo
 labelGrupoSanguineo=tk.Label(freame_pacientes, text="Grupo sanguineo: ")
-labelGrupoSanguineo.grid(row=5, column=0, pady=5, padx=5)
+labelGrupoSanguineo.grid(row=5, column=2, pady=5, padx=5)
 GrpoSanguinioEntry=tk.Entry(freame_pacientes)
-GrpoSanguinioEntry.grid(row=5, column=0, pady=5, padx=5)
+GrpoSanguinioEntry.grid(row=6, column=2, pady=5, padx=5)
 
 #tipo de seguro
 labelTipo=tk.Label(freame_pacientes, text="Tipo de seguro")
@@ -141,7 +138,7 @@ btn_frame=tk.Frame(freame_pacientes)
 btn_frame.grid(row=8, column=0, columnspan=2, pady=5, sticky="w")
 
 #boton REistrar
-btn_registrar=tk.Button(btn_frame, text="registar", command="")
+btn_registrar=tk.Button(btn_frame, text="registar", command=rgistrarPacientes)
 btn_registrar.grid(row=1, column=0, columnspan=2, pady=5)
 #boton eliminar
 btn_eliminar=tk.Button(btn_frame, text="Eliminar", command="")
