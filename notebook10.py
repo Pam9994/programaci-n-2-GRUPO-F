@@ -97,8 +97,8 @@ def EliminarPaciente():
     if seleccionado:
         indice=int(seleccionado[0])
         id_item=seleccionado[0]
-        if messagebox.askyesno("eliminar paciente", f"¿estas seguro de eliminar el paciente '{TreeViw.item(id_item'values')[0]}'?"):
-        del pacientes_data[indice]
+        if messagebox.askyesno("eliminar paciente", f"¿estas seguro de eliminar el paciente '{TreeViw.item(id_item,'values')[0]}'?"):
+            del pacientes_data[indice]
         guardar_en_archivo()  #guardar los cambios en el archivo
         cargar_treeview()
         messagebox.showinfo("eliminar paciente", "Paciente eliminado exitosamente")
