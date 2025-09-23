@@ -74,7 +74,7 @@ nombre=tk.Entry()
 nombre.grid(row=2, column=5, pady=5, padx=5)
 
 #especialidad
-esp=tk.Label(text="fecha de nacimiento:")
+esp=tk.Label(text="Especialidad:")
 esp.grid(row=3, column=0, padx=5, pady=5)
 especialidad=tk.Entry()
 especialidad.grid(row=3, column=5, padx=5, pady=5)
@@ -130,4 +130,5 @@ TreeViw.configure(yscrollcommand=Scroll_y.set)
 Scroll_y.grid(row=7, column=2, sticky="ns")
 
 cargar_desde_archivo() #cargar satos desde archivo al inicio de la aplicacion
+
 ventana_princpal.mainloop()
