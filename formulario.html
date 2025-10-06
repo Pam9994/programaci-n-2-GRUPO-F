@@ -1,0 +1,40 @@
+<html>
+<head>
+<title> pagina con formulario</title>
+<body>
+    <form name="Formulario 1">
+        Nombre:<input type="text" name="nombre"><br>
+        Direccion: <input type="text" name="direccion"><br>
+        Calle: <input type="text" name="calle">
+        carnet de identidad:<input type="text" name=carnet size=5 maxlength=5 value="99999"><br>
+
+        sintomas:
+        <br>
+        <input type=checkbox name="fiebre" value=fiebre checked>Fiebre<br>
+        <input type=checkbox name="mareos" value="mareos" checked>Mareos<br>
+        <input type=checkbox name="dolor de cabeza" value="dolor" checked>dolor de cabeza<br>
+
+        Genero:
+        <br>
+        <input type=radio name="genero" value=masculino checked>Masculino<br>
+        <input type=radio name="genero" value=femenino checked>Femenino<br>
+
+        Seguro:
+        <SELECT NAME="seguro">
+            <option value="Caja Petrolera" selected>Caja Petrolera
+            <option value="nacional">Caja Nacional
+            <option value="bancaria">Caja bancaria
+        </SELECT>
+        <br>
+        Direccion:
+        <textarea name="direccion" rows=10 cols=14>
+
+
+        </textarea>
+        <br>
+        <input type=submit name="enviar"><br>
+        <input type="reset">
+    </form>
+</body>
+</head>
+</html>
