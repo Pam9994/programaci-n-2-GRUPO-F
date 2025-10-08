@@ -1,0 +1,15 @@
+<style>
+    H1{
+        color: red;
+    }
+    P{
+        color: aqua;
+    }
+    #parrafo2{
+        color:orchid
+    }
+    .subtitulo{
+        color: aliceblue;
+        background-color: black;
+    }
+</style>
