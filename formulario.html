@@ -1,37 +1,43 @@
 <html>
 <head>
-<title> pagina con formulario</title>
+<title>Registro de estudiantes</title>
 <body>
-    <form name="Formulario 1">
-        Nombre:<input type="text" name="nombre"><br>
-        Direccion: <input type="text" name="direccion"><br>
-        Calle: <input type="text" name="calle">
-        carnet de identidad:<input type="text" name=carnet size=5 maxlength=5 value="99999"><br>
-
-        sintomas:
-        <br>
-        <input type=checkbox name="fiebre" value=fiebre checked>Fiebre<br>
-        <input type=checkbox name="mareos" value="mareos" checked>Mareos<br>
-        <input type=checkbox name="dolor de cabeza" value="dolor" checked>dolor de cabeza<br>
-
-        Genero:
-        <br>
-        <input type=radio name="genero" value=masculino checked>Masculino<br>
-        <input type=radio name="genero" value=femenino checked>Femenino<br>
-
-        Seguro:
-        <SELECT NAME="seguro">
-            <option value="Caja Petrolera" selected>Caja Petrolera
-            <option value="nacional">Caja Nacional
-            <option value="bancaria">Caja bancaria
-        </SELECT>
-        <br>
-        Direccion:
-        <textarea name="direccion" rows=10 cols=14>
-
+    <form name="Formulario 2">
+        completar:
+        color:<input type="color" name="color"><br>
+        Escriba un mensaje: <input type="text" name="mensaje"><br>
 
         </textarea>
         <br>
+       
+        elija una opcion:
+        <SELECT NAME="lrnguaje">
+            <option value="java" selected>java
+            <option value="python">phyton
+            <option value="html">html
+            <option value="visual">visual
+            <option value="otro">otro
+        </SELECT>
+        
+        <br>
+        <input type=radio name="1ro" value=1ro>1ro<br>
+        <input type=radio name="2do" value=2do>2do<br>
+        <input type=radio name="3ro" value=3ro>3ro<br>
+
+        rellene las opciones siguentes:
+
+        elija fecha:
+        <input type="date" name="fecha"><br>
+        <br>
+        
+        Elija fichero:
+        <input type="file" name="choose file"><br>
+
+        <select name="curso" multiple="multiple">
+            <option value="1ro">1ro
+            <option value="2do">2do
+            <option value="3ro">3ro
+            <option value="4to">4to
         <input type=submit name="enviar"><br>
         <input type="reset">
     </form>
