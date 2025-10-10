@@ -14,3 +14,22 @@ table{
     
     margin: 0 auto;
 }
+th,td{
+    border: solid 2px black
+    padding 40px
+}
+
+thead{
+    background-color: lemonchiffon;
+    border-bottom: solid 2px black;
+    color: blueviolet;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(90, 157, 173);
+}
+
+tr:hover td{
+    background-color: aqua;
+    color: azure;
+}
